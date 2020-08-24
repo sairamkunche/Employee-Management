@@ -69,7 +69,7 @@ namespace EmployeeManagement
         {
             services.AddControllers();
             services.AddScoped<IEmployeeManagementService, EmployeeManagementService>();
-            services.AddScoped<IRepository<Employee>, EmployeeManagementRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddDbContext<EmployeeManagementDBContext>(c =>
                         c.UseSqlServer(Configuration.GetConnectionString("EmployeeDbConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);

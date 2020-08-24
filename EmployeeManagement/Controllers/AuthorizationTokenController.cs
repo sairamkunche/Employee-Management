@@ -1,5 +1,4 @@
-﻿using EmployeeManagement.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Nancy.Json;
 using Newtonsoft.Json;
 using RestSharp;
